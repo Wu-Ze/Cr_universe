@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+@import url("http://vivarium.wdfiles.com/local--files/backrooms%3Avivtheme/stylesheet.css");
+ 
+:root {
+    --theme-base: "black-highlighter";
+    --theme-id: "Region0";
+    --theme-name: "Region0 Theme";
+    --logo-image: url("https://i.postimg.cc/vmy6rtJw/R-C.jpg");
+    --header-title: "Region 0";
+    --header-subtitle: "梦开始的地方。。。";
+    --white-monochrome: 209,209,209;
+    --very-light-gray-monochrome: 192,192,192;
+    --pale-gray-monochrome: 237,237,237;
+    --light-pale-gray-monochrome: 196,196,196;
+    --light-gray-monochrome: 82,82,82;
+    --gray-monochrome: 92,96,96;
+    --dark-gray-monochrome: 1,38,35;
+    --black-monochrome: 1,20,17;
+    --bright-accent: 43,86,128;
+    --medium-accent: 21,33,38;
+    --dark-accent: 18,15,38;
+    --pale-accent: 18,15,38;
+    --swatch-topmenu-border-color: var(--gray-monochrome);
+    --link-color: var(--bright-accent);
+    --hover-link-color: 3,46,88;
+    --alt-accent:140,88,140;
+    --background-gradient-distance: 20rem;
+    --gradient-header: linear-gradient(to bottom, rgba(var(--black-monochrome)) 0%, rgba(var(--gray-monochrome), 1) 100%);
+    --diagonal-stripes: linear-gradient(transparent 0);
+    --header-height-on-desktop:10rem;
+    --header-height-on-mobile: 10rem;
+    --swatch-menubg-medium-color: var(--pale-gray-monochrome);
+    --swatch-tertiary-color: var(--dark-gray-monochrome);
+}
+ 
+#header {
+   background-size:auto calc(var(--header-height-on-desktop) - 2rem);
+   background-position: center;
+    animation:header 3s alternate infinite;
+    -webkit-animation:header 3s alternate infinite; /* Safari 和 Chrome */
+}
+ 
+@keyframes header {
+ 
+0%{
+   background-position: center 40%;
+}
+ 
+100%{
+   background-position: center 60%;
+}
+ 
+}
+ 
+#header h1,
+#header h1 a {
+    position: absolute;
+    top: 2rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+ 
+#header h2,
+#header h2 span,
+#header h2 span::before {
+    position: absolute;
+    top: 2.5rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ 
+#header h1 a::before,
+#header h2 span::before {
+    text-shadow: .063rem 0.1rem 0.1rem #0c0c0c;
+}
+ 
+#side-bar:hover,
+#side-bar:active,
+#side-bar:focus-within {
+      background-color: rgb(var(--white-monochrome));
+}
+ 
+span.printuser{
+   color:rgb(var(--white-monochrome));
+}
+ 
+input#search-top-box-input:hover {
+   background-color:rgb(var(--bright-accent));
+}
+ 
+input#search-top-box-input {
+   background-color:rgb(var(--white-monochrome));
+}
+ 
+#toc {
+   background-color:rgb(var(--gray-monochrome));
+   color:rgb(var(--white-monochrome));
+   box-shadow: 0 0.2rem 0.3rem rgba(0,0,0,.25);
+   border: none;
+   padding: 0.5rem
+}
+ 
+#toc a {
+   color: rgb(var(--swatch-menubg-medium-color));
+}
+ 
+.bblock:hover{
+   color: rgb(var(--swatch-menubg-medium-color));
+}
+ 
+.document {
+    background-color: rgb(var(--white-monochrome));
+    color: rgb(var(--dark-accent));
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    margin: 1rem 0.2rem;
+    padding: 0.2rem 1rem;
+    position: relative;
+}
+ 
+.document:before,
+.document:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+ 
+.document:before {
+    background-color: rgb(var(--white-monochrome));
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-4deg);
+}
+ 
+.document:after {
+    background-color: rgb(var(--white-monochrome));
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.5);
+    right: -3px;
+    top: 1px;
+    transform: rotate(3deg);
+}
+ 
+.dark-document {
+    color: rgb(var(--white-monochrome));
+    background-color: rgb(var(--dark-accent));
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    margin: 1rem 0.2rem;
+    padding: 0.2rem 1rem;
+    position: relative;
+}
+ 
+.dark-document:before,
+.dark-document:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+ 
+.dark-document:before {
+    background-color: rgb(var(--dark-accent));
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-4deg);
+}
+ 
+.dark-document:after {
+    background-color: rgb(var(--dark-accent));
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.5);
+    right: -3px;
+    top: 1px;
+    transform: rotate(3deg);
+}
+
+ 
+[!--.bfpfblock{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    background-image: url(http://backrooms-wiki-cn.wikidot.com/local--files/theme:b-f-p-f/bfpf%281%29.svg);
+    background-size:auto 7rem;
+    background-position: center bottom;
+    background-repeat:no-repeat;
+    color:rgb(25, 20, 16);
+    margin: 1rem 0.2rem;
+    padding: 0.2rem 1rem 8rem 1rem;
+    display: block;
+    position: relative;
+    background-color: rgb(255,246,219);
+    border-left: solid 0.3rem #E18C18;
+    border-bottom: solid 0.5rem #E18C18;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.3rem 0.5rem;
+    }
+ 
+.bfpfblock>p:nth-child(1)::before {
+    content: "B.F.P.F.";
+    background: repeating-linear-gradient(-30deg,rgba(253, 157, 11, 0.8),rgba(225, 140, 24, 1)70px);
+    font-family: 'CKTKkingkong', sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: solid 0.2rem #E18C18;
+    max-width: 49rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    color:white;
+}
+ 
+.bfpfblock>p:nth-child(1)::after {
+    content: "保 护 所 有 人";
+    font-weight: 600;
+    font-size: 75%;
+    text-align: center;
+    margin-top: -4.25rem;
+    padding-bottom: 0.3rem;
+    max-width: 49rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    color:white;
+}
+ 
+.bfpfblock>p:nth-child(2) {
+    margin-top: 4rem;
+}--]
+ 
+.hovertip{
+    border:none!important;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+}
